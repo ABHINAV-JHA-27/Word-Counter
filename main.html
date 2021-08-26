@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  
+<body style="text-align: center;">
+    <h1 style="color: blue">
+        WORD COUNTER WEB APP
+    </h1>
+    <p>
+        Type in the textbox and click on
+        the button to count the words
+    </p>
+    <textarea id="input" rows=10 cols="60"></textarea>
+    <br><br>
+    <button onclick="countWords()">COUNT</button>
+    <br><br>
+    <p> WORD COUNT : <span id="show">0</span></p>
+    <script>
+        function countWords() {
+            var text = document.getElementById("input").value;
+            var numWords = 0; 
+            for (var i = 0; i < text.length; i++) {
+                var currentCharacter = text[i];
+                if (currentCharacter == " ") {
+                    numWords += 1;
+                }
+            }
+            numWords += 1;
+            document.getElementById("show").innerHTML = numWords;
+        }
+    </script>
+</body>
+  
+</html>
